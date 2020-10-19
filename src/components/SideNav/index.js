@@ -1,38 +1,53 @@
 import React from 'react';
 import { GitHub, Linkedin, Instagram, Facebook } from 'react-feather';
 import Music from './Music';
-import { Icon, SideNav, IconBottom, SpaceTop } from './style';
+import {
+  FacebookIcon,
+  InstagramIcon,
+  LinkedinIcon,
+  GitHubIcon,
+  SideNav,
+  IconBottom,
+  SpaceTop,
+} from './style';
 export default function SideNavigation() {
   const socialMedia = {
     linkedin: 'https://www.linkedin.com/in/erick-willian-8553a2133/',
-    facebook: '/',
-    gitHub: '/',
-    instagram: '/',
+    facebook: 'https://www.facebook.com/erick.willian.16100',
+    gitHub: 'https://github.com/Erickinhou',
+    instagram: 'https://www.instagram.com/erick_willian_/',
   };
 
   const IconsAttr = {
     strokeWidth: '1.2',
-    width: '3vw',
-    height: '3vw',
+    width: '2.7vw',
+    height: '2.7vw',
+  };
+
+  const IconsBottomAttr = {
+    strokeWidth: '1.2',
+    width: '2vw',
+    height: '2vw',
+    color: 'var(--light)',
   };
 
   return (
     <SideNav>
       <SpaceTop></SpaceTop>
-      <Icon href={socialMedia.gitHub} target="_blank">
+      <GitHubIcon href={socialMedia.gitHub} target="_blank">
         <GitHub {...IconsAttr}></GitHub>
-      </Icon>
-      <Icon className="linkedin" href={socialMedia.linkedin} target="_blank">
+      </GitHubIcon>
+      <LinkedinIcon href={socialMedia.linkedin} target="_blank">
         <Linkedin {...IconsAttr}></Linkedin>
-      </Icon>
-      <Icon href={socialMedia.instagram} target="_blank">
+      </LinkedinIcon>
+      <InstagramIcon href={socialMedia.instagram} target="_blank">
         <Instagram {...IconsAttr}></Instagram>
-      </Icon>
-      <Icon href={socialMedia.facebook} target="_blank">
+      </InstagramIcon>
+      <FacebookIcon href={socialMedia.facebook} target="_blank">
         <Facebook {...IconsAttr}></Facebook>
-      </Icon>
+      </FacebookIcon>
       <IconBottom>
-        <Music {...IconsAttr}></Music>
+        <Music {...IconsBottomAttr}></Music>
       </IconBottom>
     </SideNav>
   );
