@@ -17,21 +17,16 @@ import { useState } from 'react';
 
 export default function Home() {
   const handleButtonOnHover = (event) => {
-    if (!event.target.getAttribute('fill')) setButtonContent(!buttonContent);
-    else setButtonFillContent(!buttonFillContent);
+    setButtonFillContent(!buttonFillContent);
   };
   const handleButtonOffHover = (event) => {
-    console.log('teste');
-    if (!event.target.getAttribute('fill')) setButtonContent(!buttonContent);
-    else setButtonFillContent(!buttonFillContent);
-    console.log(buttonContent);
+    setButtonFillContent(!buttonFillContent);
   };
 
   const buttonsProps = {
     onMouseOver: handleButtonOnHover,
     onMouseLeave: handleButtonOffHover,
   };
-  const [buttonContent, setButtonContent] = useState(false);
   const [buttonFillContent, setButtonFillContent] = useState(false);
 
   return (
@@ -46,8 +41,8 @@ export default function Home() {
           <br /> and a listener of lofi :p
         </Text>
         <div>
-          <Button {...buttonsProps} to="/works">
-            {buttonContent ? 'Thanks!' : 'See my works'}
+          <Button to="/works">
+            <span>See my works</span>
           </Button>
           <StrokeButton fill="true" {...buttonsProps}>
             {buttonFillContent ? 'Thanks!' : 'About Me'}

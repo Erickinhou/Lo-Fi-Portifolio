@@ -36,24 +36,54 @@ const Button = styled(Link)`
   padding: 15px 0;
   width: 200px;
   text-align: center;
-  color: #fff;
-  background-color: var(--red);
+  background-image: linear-gradient(40deg, transparent 0%, rgba(235, 87, 87, 0.4) 51% , var(--red) 100%);
   text-decoration: none;
+  background-size: 200% auto;
   border-radius: 5px;
   font-size: 1.5rem;
   margin: 0 2vw 0 0;
   transition: all 0.4s ease-in-out;
-  &:hover {
-    background-color: var(--light);
+  & > span{
+    background: linear-gradient(to right, var(--light) , white);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+  }
+
+         
+  &:hover{
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+  &:hover > span{
+    background: linear-gradient(to right, white , white);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
   }
 `;
 
-const StrokeButton = styled(Button)`
+const StrokeButton = styled(Link)`
+  display: inline-block;
+  padding: 15px 0;
+  width: 200px;
+  text-decoration: none;
+  text-align: center;
   background-color: transparent;
-  border: 2px solid white;
+  color: #939393;
+  border: 2px solid #939393;
+  border-radius: 5px;
+  font-size: 1.5rem;
   margin: 0 0 0 2vw;
+  transition: all 0.4s ease-in-out;
   &:hover {
-    border: 2px solid var(--light);
+    border: 2px solid white;
+    color: #fff;
   }
 `;
 
