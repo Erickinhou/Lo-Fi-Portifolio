@@ -91,8 +91,9 @@ const StrokeButton = styled(Link)`
 
 const Agency = styled.p`
   position: absolute;
-  bottom: 0;
+  bottom: 1vh;
   right: 1vw;
+  margin: 0.5vw 0 0 0;
   color: var(--light);
   font-size: 1.2rem;
   font-weight: 300;
@@ -103,15 +104,17 @@ const AgencyLink = styled.a`
 
 //Music text area
 const MusicTextArea = styled.div`
+  position: absolute;
+  left: 8vw;
+  bottom: 1vw;
   display: flex;
   align-items: center;
   font-size: 1.2rem;
   color: var(--light);
-  margin: 0 0 0 8vw;
 `;
 
 const MinorText = styled.p`
-  margin-left: 0.5vw;
+  margin: 0 0 0 0;
 `;
 
 export {
