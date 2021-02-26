@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 import Its1amGif from '../../assets/Its1am.gif';
 import { Link } from 'react-router-dom';
+import {motion} from 'framer-motion'
 
 const Background = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: initial;
   width: 100vw;
   height: 100vh;
   background: url(${Its1amGif});
@@ -14,84 +15,91 @@ const Background = styled.div`
 `;
 
 const MainArea = styled.div`
-  color: #fff;
-  margin: 4vh 0 0 8vw;
+  color: #ddd;
+  margin: 0 0 0 8vw;
 `;
 
 const Text = styled.h3`
-  font-weight: 300;
-  font-size: 1.5rem;
+  font-weight: 400;
+  font-size: 16px;
 `;
 const TextMain = styled.h1`
-  font-weight: 300;
-  font-size: 3rem;
+  font-weight: 400;
+  font-size: 32px;
 `;
 const TextHighlight = styled.b`
   color: var(--red);
-  font-weight: 400;
+  font-weight: 500; 
 `;
+
+//
 //Buttons Area
-const Button = styled(Link)`
+const ButtonsProps = motion.custom(Link);
+const Button = styled(ButtonsProps)`
+  position: relative;
   display: inline-block;
-  padding: 15px 0;
-  width: 200px;
+  padding: 12px 0;
+  width: 160px;
   text-align: center;
-  background-image: linear-gradient(40deg, transparent 0%, rgba(235, 87, 87, 0.4) 51% , var(--red) 100%);
+  color: var(--red);
   text-decoration: none;
-  background-size: 200% auto;
-  border-radius: 5px;
-  font-size: 1.5rem;
-  margin: 0 2vw 0 0;
-  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+  box-sizing: border-box;
   & > span{
-    background: linear-gradient(to right, var(--light) , white);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -moz-text-fill-color: transparent;
+    font-size: 16px
   }
-
-         
-  &:hover{
-    background-position: right center; /* change the direction of the change here */
-    color: #fff;
-    text-decoration: none;
+  &:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid var(--red);
+    border-left: 2px solid var(--red);
+    transition: 0.5s
   }
-  &:hover > span{
-    background: linear-gradient(to right, white , white);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -moz-text-fill-color: transparent;
+  &:hover:before{
+    width: 100%;
+    height: 100%;
+  }
+  &:hover:after{
+    width: 100%;
+    height: 100%;
+  }
+  &:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid var(--red);
+    border-right: 2px solid var(--red);
+    transition: 0.5s
   }
 `;
 
-const StrokeButton = styled(Link)`
+const StrokeButton = styled(ButtonsProps)`
+  position: relative;
   display: inline-block;
-  padding: 15px 0;
-  width: 200px;
-  text-decoration: none;
+  padding: 10px 0;
+  width: 160px;
   text-align: center;
+  text-decoration: none;
   background-color: transparent;
-  color: #939393;
-  border: 2px solid #939393;
-  border-radius: 5px;
-  font-size: 1.5rem;
+  color: #ddd;
+  border: 2px solid #ddd;
   margin: 0 0 0 2vw;
-  transition: all 0.4s ease-in-out;
-  &:hover {
-    border: 2px solid white;
-    color: #fff;
-  }
+  overflow: hidden;
+  box-sizing: border-box;
 `;
 
 //Agency area
 
 const Agency = styled.p`
   position: absolute;
-  bottom: 1vh;
+  bottom: 1vw;
   right: 1vw;
   margin: 0.5vw 0 0 0;
   color: var(--light);

@@ -22,7 +22,7 @@ export default function Music(props) {
     <audio
       {...(muted ? { muted: true } : {})}
       onCanPlay={(e) => setIsPlaying(e.target.paused)}
-      autoPlay={true}
+      autoPlay={false}
       ref={music}
     ></audio>
   );

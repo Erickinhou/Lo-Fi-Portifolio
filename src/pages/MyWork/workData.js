@@ -1,4 +1,5 @@
 import React from 'react'
+import {JobCard, CardWrapper} from './style.js'
 import gameEducaImage from '../../assets/gameEduca.svg'
 
 export default function workData() {
@@ -38,18 +39,18 @@ export default function workData() {
     function getProjects(){
         console.log(projects);
         return(
-            <>
+            <CardWrapper>
             {
-                projects.map(({title, worked, image = '',  time, contract, tech, aboutCompany, aboutProject, usefulKnowledge}) => {
+                projects.map(({title, worked, image,  time, contract, tech, aboutCompany, aboutProject, usefulKnowledge}) => {
                     return(
-                        <div>
+                        <JobCard>
                             {title}
                             <img src={image} alt={title}/>
-                        </div>
+                        </JobCard>
                     )
                 })
             }   
-            </>
+            </CardWrapper>
         )
     }
     return (

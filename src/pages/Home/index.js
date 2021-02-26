@@ -13,21 +13,25 @@ import {
   MinorText,
   AgencyLink,
 } from './style';
-import { useState } from 'react';
+
+const buttonVariants = {
+  hover: {
+    backgroundColor: '#eb5757',
+    color: '#101010',
+    boxShadow: '0 0 50px #eb5757',
+    transition: {
+      delay: 0.4,
+      duration: 0.1
+    }
+  },
+  strokeHover: {
+    boxShadow: '0px 0px 8px rgb(255,255,255)',
+    textShadow: '0px 0px 8px rgb(255,255,255)',
+    scale: 1.1,
+  }
+}
 
 export default function Home() {
-  const handleButtonOnHover = (event) => {
-    setButtonFillContent(!buttonFillContent);
-  };
-  const handleButtonOffHover = (event) => {
-    setButtonFillContent(!buttonFillContent);
-  };
-
-  const buttonsProps = {
-    onMouseOver: handleButtonOnHover,
-    onMouseLeave: handleButtonOffHover,
-  };
-  const [buttonFillContent, setButtonFillContent] = useState(false);
 
   return (
     <Background>
@@ -41,11 +45,11 @@ export default function Home() {
           <br /> and a listener of lofi :p
         </Text>
         <div>
-          <Button to="/works">
+          <Button variants={buttonVariants} whileHover='hover' to="/works">
             <span>See my works</span>
           </Button>
-          <StrokeButton fill="true" {...buttonsProps}>
-            {buttonFillContent ? 'Thanks!' : 'About Me'}
+          <StrokeButton variants={buttonVariants} whileHover='strokeHover' fill="true" >
+            <span>About Me</span>
           </StrokeButton>
         </div>
       </MainArea>
