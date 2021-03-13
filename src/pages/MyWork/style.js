@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import streetLofiGif from "../../assets/street.gif";
+import streetLofiGif from "../../assets/images/street.gif";
 
 const Background = styled.div`
   display: flex;

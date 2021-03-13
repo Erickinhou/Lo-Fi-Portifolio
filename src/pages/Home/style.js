@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import Its1amGif from '../../assets/Its1am.gif';
-import { Link } from 'react-router-dom';
-import {motion} from 'framer-motion'
+import styled from "styled-components";
+import Its1amGif from "../../assets/images/Its1am.gif";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Background = styled.div`
   display: flex;
@@ -11,7 +11,7 @@ const Background = styled.div`
   height: 100vh;
   background: url(${Its1amGif});
   background-size: cover;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 `;
 
 const MainArea = styled.div`
@@ -29,7 +29,7 @@ const TextMain = styled.h1`
 `;
 const TextHighlight = styled.b`
   color: var(--red);
-  font-weight: 500; 
+  font-weight: 500;
 `;
 
 //
@@ -45,11 +45,11 @@ const Button = styled(ButtonsProps)`
   text-decoration: none;
   overflow: hidden;
   box-sizing: border-box;
-  & > span{
-    font-size: 16px
+  & > span {
+    font-size: 16px;
   }
-  &:before{
-    content: '';
+  &:before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -57,18 +57,18 @@ const Button = styled(ButtonsProps)`
     height: 10px;
     border-top: 2px solid var(--red);
     border-left: 2px solid var(--red);
-    transition: 0.5s
+    transition: 0.5s;
   }
-  &:hover:before{
+  &:hover:before {
     width: 100%;
     height: 100%;
   }
-  &:hover:after{
+  &:hover:after {
     width: 100%;
     height: 100%;
   }
-  &:after{
-    content: '';
+  &:after {
+    content: "";
     position: absolute;
     bottom: 0;
     right: 0;
@@ -76,7 +76,7 @@ const Button = styled(ButtonsProps)`
     height: 10px;
     border-bottom: 2px solid var(--red);
     border-right: 2px solid var(--red);
-    transition: 0.5s
+    transition: 0.5s;
   }
 `;
 
@@ -136,5 +136,5 @@ export {
   Agency,
   MusicTextArea,
   MinorText,
-  AgencyLink,
+  AgencyLink
 };

@@ -10,9 +10,9 @@ import {
   ClientMessage,
   LineBottom
 } from "./style.js";
-import storyKeeperLogo from "../../assets/storyKeeper.png";
-import h2rLogo from "../../assets/H2R.png";
-import ethicsNetLogo from "../../assets/logoEthics.png";
+import storyKeeperLogo from "../../assets/images/storyKeeper.png";
+import h2rLogo from "../../assets/images/H2R.png";
+import ethicsNetLogo from "../../assets/images/logoEthics.png";
 
 export default function workData() {
   const cardVariant = {
@@ -54,22 +54,15 @@ export default function workData() {
     }
   ];
   function getProjects() {
-    console.log(projects);
     return (
       <CardWrapper>
         {projects.map(
-          ({
-            title,
-            worked,
-            image,
-            time,
-            techs,
-            color,
-            message,
-            urlProject
-          }) => {
+          (
+            { title, worked, image, time, techs, color, message, urlProject },
+            index
+          ) => {
             return (
-              <JobCard>
+              <JobCard key={index}>
                 <motion.div variants={cardVariant} whileHover="Hover">
                   <div>
                     <a
@@ -93,8 +86,8 @@ export default function workData() {
                       </div>
 
                       <div>
-                        {techs.map((tech) => (
-                          <p>{tech}</p>
+                        {techs.map((tech, index) => (
+                          <p key={index}>{tech}</p>
                         ))}
                       </div>
                     </CardDetails>
