@@ -1,29 +1,36 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { Volume2, Volume, Play, Pause } from 'react-feather';
-import lofiBokuNoHero from '../../../assets/my hero academia the day lofi.mp3';
-import lofiNova from '../../../assets/mell-ø - nova.mp3';
-import { MusicArea } from './style';
+import React, { useState, useRef, useEffect } from "react";
+import { Volume2, Volume, Play, Pause } from "react-feather";
+import lofiBokuNoHero from "../../../assets/songs/bokuNoHeroLofi.mp3";
+import lofiNova from "../../../assets/songs/novaLofi.mp3";
+import dororoLofi from "../../../assets/songs/dororoLofi.mp3";
+import flowersLofi from "../../../assets/songs/flowersLofi.mp3";
+import { MusicArea } from "./style";
 
 export default function Music(props) {
   const [muted, setMuted] = useState(false);
   const [isPlaying, setIsPlaying] = useState(true);
+  const [currentSong, setCurrentSong] = useState(1);
   const music = useRef(null);
+  const musics = [lofiBokuNoHero, lofiNova, dororoLofi, flowersLofi];
   useEffect(() => {
-    const randomNumber = Math.random() * 2;
-
-    if (randomNumber <= 1) {
-      music.current.src = lofiNova;
-    }
-    if (randomNumber > 1) {
-      music.current.src = lofiBokuNoHero;
-    }
+    const IntegerRandomNumber = Math.floor(Math.random() * 4);
+    music.current.src = musics[IntegerRandomNumber];
+    setCurrentSong(IntegerRandomNumber);
   }, []);
+  const handleSongEnd = async () => {
+    const newIdex = (currentSong + 1) % (musics.length - 1);
+    music.current.src = musics[newIdex];
+    await setCurrentSong(newIdex);
+    music.current.play();
+  };
   const renderVideo = () => (
     <audio
       {...(muted ? { muted: true } : {})}
       onCanPlay={(e) => setIsPlaying(e.target.paused)}
       autoPlay={false}
       ref={music}
+      onEnded={handleSongEnd}
+      src=""
     ></audio>
   );
   const handlePlay = () => {
