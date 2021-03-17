@@ -16,7 +16,7 @@ export const Background = styled.div`
   font-weight: 300;
   overflow: hidden;
   & > div:first-child {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.3);
   }
 `;
 

@@ -62,11 +62,20 @@ const Index = () => {
                 <p>
                   My favorite hobby is create cool projects (Like this site).
                 </p>
+                <p style={{ fontSize: "12px" }}>
+                  Ps. All images here are draggable.{" "}
+                </p>
               </div>
             </div>
 
             <div>
-              <Title>Things that I love create</Title>
+              <Title>
+                Things that I{" "}
+                <span role="img" aria-label="Love">
+                  ❤️
+                </span>{" "}
+                create
+              </Title>
               <ul>
                 <li>
                   API's <ChevronsLeft />
@@ -81,7 +90,7 @@ const Index = () => {
                   E-commerce <ChevronsLeft />
                 </li>
                 <li>
-                  design ( sometimes ) <ChevronsLeft />
+                  Design ( sometimes ) <ChevronsLeft />
                 </li>
               </ul>
             </div>
@@ -90,7 +99,12 @@ const Index = () => {
             <Title>Technologies that I domain</Title>
             <TextBox>
               {techs.map(({ name, image }) => (
-                <ImageWrapper size="50px;" draggable={true} drag>
+                <ImageWrapper
+                  size="50px;"
+                  whileHover={{ scale: 1.1 }}
+                  draggable={true}
+                  drag
+                >
                   <img src={image} alt={name} />
                   <p>{name}</p>
                 </ImageWrapper>
