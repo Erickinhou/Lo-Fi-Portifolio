@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const Icon = styled.a`
   padding: 2vh 2vw;
@@ -42,6 +43,7 @@ const SideNav = styled.div`
   height: 100vh;
   width: 6vw;
   border-right: 2px solid var(--light);
+  backdrop-filter: blur(2px);
 `;
 const IconBottom = styled.div`
   margin: auto 0 1vh 0;
@@ -51,6 +53,12 @@ const IconBottom = styled.div`
 const SpaceTop = styled.div`
   margin-bottom: auto;
 `;
+const StyleArrow = styled.div`
+  padding: 10px;
+  color: var(--light);
+  cursor: pointer;
+`;
+const ArrowWrapper = motion(StyleArrow);
 export {
   Icon,
   SideNav,
@@ -60,4 +68,5 @@ export {
   InstagramIcon,
   GitHubIcon,
   FacebookIcon,
+  ArrowWrapper
 };
