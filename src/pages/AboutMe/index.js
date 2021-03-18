@@ -57,8 +57,8 @@ const Index = () => {
                 </p>
 
                 <p>
-                  I currently studying Systems at the State University of Montes
-                  Claros,
+                  Currently, I'm coursing Information Systems at the State
+                  University of Montes Claros,
                 </p>
                 <p style={{ marginBottom: "10px" }}>
                   {" "}
