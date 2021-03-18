@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { ChevronsLeft } from "react-feather";
 import { Background, Container, ImageWrapper, TextBox, Title } from "./style";
+import ContactMe from "../../components/ContactMeButton";
+import Modal from "../../components/Modal";
+import { ModalContext } from "../../GlobalContext";
 import imageErick from "../../assets/images/imageErick.png";
 import awsLogo from "../../assets/images/aws-logo.png";
 import reactLogo from "../../assets/images/react.svg";
@@ -19,9 +22,12 @@ const Index = () => {
     { name: "aws", image: awsLogo }
   ];
 
+  const { isModalOpen } = useContext(ModalContext);
   return (
     <Background>
       <div>
+        <ContactMe />
+        {isModalOpen && <Modal />}
         <Container>
           <TextBox>
             <div>
@@ -56,7 +62,7 @@ const Index = () => {
                 </p>
                 <p style={{ marginBottom: "10px" }}>
                   {" "}
-                  but i graduated in electrical engineering in CEFET-MG{" "}
+                  but I graduated in electrical engineering in CEFET-MG{" "}
                 </p>
 
                 <p>

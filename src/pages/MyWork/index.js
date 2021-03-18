@@ -1,8 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Hexagon, ArrowRight } from "react-feather";
 import { AnimatePresence, motion } from "framer-motion";
+
+//import context
+import { ModalContext } from "../../GlobalContext";
+import ContactMe from "../../components/ContactMeButton";
+import Modal from "../../components/Modal";
 import { Background, IconContainer, Container } from "./style";
 import WorkData from "./workData";
+
 export default function MyWork() {
   const [showData, setShowData] = useState(false);
   const workDataVariants = {
@@ -45,7 +51,6 @@ export default function MyWork() {
       }
     }
   };
-
   const hexagonVariance = {
     hover: {
       scale: 1.3,
@@ -57,19 +62,21 @@ export default function MyWork() {
       }
     },
     closed: {
-      color: "#fff",
       y: 0
     },
     opened: {
-      color: "#68C39E",
       scale: 1.3,
       rotate: 90
     }
   };
 
+  const { isModalOpen } = useContext(ModalContext);
+
   return (
     <Background>
       <Container>
+        <ContactMe />
+        {isModalOpen && <Modal />}
         <IconContainer>
           <AnimatePresence exitBeforeEnter>
             {!showData && (

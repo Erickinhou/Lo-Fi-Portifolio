@@ -49,7 +49,7 @@ export default function SideNavigation() {
           whileHover={{ scale: 1.2 }}
           onClick={() => history.goBack()}
         >
-          <ArrowLeft />
+          <ArrowLeft {...IconsAttr} />
         </ArrowWrapper>
       )}
       <SpaceTop />
