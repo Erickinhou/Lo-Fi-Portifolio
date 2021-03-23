@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { fadeAnimation } from "./animations";
 import Routes from "./routes/routes";
 //loading component
 import Loading from "./components/Loading";
@@ -23,9 +24,10 @@ function App() {
           <Loading />
         ) : (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial="hidden"
+            animate="show"
+            exit="exit"
+            variants={fadeAnimation}
           >
             <Routes />
           </motion.div>

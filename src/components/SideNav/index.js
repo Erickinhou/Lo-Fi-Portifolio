@@ -18,7 +18,7 @@ import {
   SpaceTop,
   ArrowWrapper
 } from "./style";
-export default function SideNavigation() {
+export default function SideNavigation({ hideMusic }) {
   const location = useLocation();
   const history = useHistory();
 
@@ -43,7 +43,7 @@ export default function SideNavigation() {
   };
 
   return (
-    <SideNav>
+    <SideNav hideMusic={hideMusic}>
       {location.pathname !== "/" && (
         <ArrowWrapper
           whileHover={{ scale: 1.2 }}

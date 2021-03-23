@@ -34,14 +34,16 @@ const FacebookIcon = styled(Icon)`
 
 const SideNav = styled.div`
   position: absolute;
+  z-index: 5;
   top: 0;
-  left: 0;
+  left: ${({ hideMusic }) => (hideMusic ? "-100px" : 0)};
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
   width: 6vw;
+  transition: all 0.8s;
   border-right: 2px solid var(--light);
   backdrop-filter: blur(2px);
 `;

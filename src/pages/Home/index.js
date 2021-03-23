@@ -1,5 +1,7 @@
 import React from "react";
 import { ArrowLeft } from "react-feather";
+//animation
+import { homePageAnimation } from "../../animations";
 import {
   Background,
   Text,
@@ -32,7 +34,12 @@ const buttonVariants = {
 
 export default function Home() {
   return (
-    <Background>
+    <Background
+      initial="hidden"
+      animate="show"
+      exit="exit"
+      variants={homePageAnimation}
+    >
       <MainArea>
         <Text>Hi, my name is Erick.</Text>
         <TextMain>

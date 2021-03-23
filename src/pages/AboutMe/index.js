@@ -11,6 +11,8 @@ import htmlLogo from "../../assets/images/html.svg";
 import nodeLogo from "../../assets/images/node.svg";
 import sassLogo from "../../assets/images/sass.svg";
 import typeScriptLogo from "../../assets/images/typeScript.svg";
+//animation
+import { sidePagesAnimation } from "../../animations";
 
 const Index = () => {
   const techs = [
@@ -24,7 +26,12 @@ const Index = () => {
 
   const { isModalOpen } = useContext(ModalContext);
   return (
-    <Background>
+    <Background
+      initial="hidden"
+      animate="show"
+      exit="exit"
+      variants={sidePagesAnimation}
+    >
       <div>
         <ContactMe />
         {isModalOpen && <Modal />}

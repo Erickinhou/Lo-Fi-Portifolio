@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 import streetLofiGif from "../../assets/images/street.gif";
 
-const Background = styled.div`
+const Background = motion(styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -14,7 +15,7 @@ const Background = styled.div`
   font-size: 1.5rem;
   font-weight: 300;
   overflow: hidden;
-`;
+`);
 const Container = styled.div`
   margin: 0 0 0 8vw;
   display: flex;

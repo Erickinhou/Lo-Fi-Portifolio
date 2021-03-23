@@ -1,19 +1,35 @@
-import React from "react";
-import { Route, Switch } from "react-router-dom";
+import React, { useState } from "react";
+import { Route, Switch, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+
 import SideNav from "../components/SideNav";
+import PageLoader from "../components/PageLoading";
+
 import Home from "../pages/Home";
 import MyWork from "../pages/MyWork";
 import AboutMe from "../pages/AboutMe";
 
 export default function Routes() {
+  const location = useLocation();
+  const [hideMusic, setHideMusic] = useState(false);
+  const animationDelay = async () => {
+    if (location.pathname === "/") return;
+    await setHideMusic(true);
+    setTimeout(() => {
+      setHideMusic(false);
+    }, 1600);
+  };
   return (
     <>
-      <SideNav></SideNav>
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/works" exact component={MyWork} />
-        <Route path="/about-me" exact component={AboutMe} />
-      </Switch>
+      <PageLoader />
+      <SideNav hideMusic={hideMusic} />
+      <AnimatePresence exitBeforeEnter onExitComplete={animationDelay}>
+        <Switch location={location} key={location.pathname}>
+          <Route path="/works" component={MyWork} />
+          <Route path="/about-me" component={AboutMe} />
+          <Route path="/" component={Home} />
+        </Switch>
+      </AnimatePresence>
     </>
   );
 }

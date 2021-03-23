@@ -6,6 +6,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ModalContext } from "../../GlobalContext";
 import ContactMe from "../../components/ContactMeButton";
 import Modal from "../../components/Modal";
+//animation
+import { sidePagesAnimation } from "../../animations";
 import { Background, IconContainer, Container } from "./style";
 import WorkData from "./workData";
 
@@ -73,7 +75,12 @@ export default function MyWork() {
   const { isModalOpen } = useContext(ModalContext);
 
   return (
-    <Background>
+    <Background
+      initial="hidden"
+      animate="show"
+      exit="exit"
+      variants={sidePagesAnimation}
+    >
       <Container>
         <ContactMe />
         {isModalOpen && <Modal />}

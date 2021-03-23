@@ -3,7 +3,7 @@ import Its1amGif from "../../assets/images/Its1am.gif";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-const Background = styled.div`
+const Background = motion(styled.div`
   display: flex;
   flex-direction: row;
   justify-content: initial;
@@ -12,7 +12,7 @@ const Background = styled.div`
   background: url(${Its1amGif});
   background-size: cover;
   font-family: "Montserrat", sans-serif;
-`;
+`);
 
 const MainArea = styled.div`
   color: #ddd;

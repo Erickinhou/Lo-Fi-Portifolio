@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import relaxStudyGif from "../../assets/images/relaxAndStudyDark.gif";
 
-export const Background = styled.div`
+export const Background = motion(styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -18,7 +18,7 @@ export const Background = styled.div`
   & > div:first-child {
     background-color: rgba(0, 0, 0, 0.3);
   }
-`;
+`);
 
 export const ContactMe = styled.div``;
 export const Container = styled.div`
