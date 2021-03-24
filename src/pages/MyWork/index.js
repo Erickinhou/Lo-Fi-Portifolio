@@ -75,12 +75,7 @@ export default function MyWork() {
   const { isModalOpen } = useContext(ModalContext);
 
   return (
-    <Background
-      initial="hidden"
-      animate="show"
-      exit="exit"
-      variants={sidePagesAnimation}
-    >
+    <Background variants={sidePagesAnimation}>
       <Container>
         <ContactMe />
         {isModalOpen && <Modal />}

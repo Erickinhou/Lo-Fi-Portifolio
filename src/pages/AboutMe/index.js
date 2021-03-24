@@ -26,12 +26,7 @@ const Index = () => {
 
   const { isModalOpen } = useContext(ModalContext);
   return (
-    <Background
-      initial="hidden"
-      animate="show"
-      exit="exit"
-      variants={sidePagesAnimation}
-    >
+    <Background variants={sidePagesAnimation}>
       <div>
         <ContactMe />
         {isModalOpen && <Modal />}

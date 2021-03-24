@@ -34,12 +34,7 @@ const buttonVariants = {
 
 export default function Home() {
   return (
-    <Background
-      initial="hidden"
-      animate="show"
-      exit="exit"
-      variants={homePageAnimation}
-    >
+    <Background variants={homePageAnimation}>
       <MainArea>
         <Text>Hi, my name is Erick.</Text>
         <TextMain>
