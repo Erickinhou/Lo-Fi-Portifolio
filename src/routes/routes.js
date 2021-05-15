@@ -15,15 +15,14 @@ export default function Routes() {
   return (
     <>
       <SideNav />
-      <Container>
-        <AnimatePresence exitBeforeEnter>
-          <Switch location={location} key={location.pathname}>
-            <Route path="/works" component={MyWork} />
-            <Route path="/about-me" component={AboutMe} />
-            <Route path="/" component={Home} />
-          </Switch>
-        </AnimatePresence>
-      </Container>
+      <Container />
+      <AnimatePresence exitBeforeEnter>
+        <Switch location={location} key={location.pathname}>
+          <Route path="/works" component={MyWork} />
+          <Route path="/about-me" component={AboutMe} />
+          <Route path="/" component={Home} />
+        </Switch>
+      </AnimatePresence>
     </>
   );
 }

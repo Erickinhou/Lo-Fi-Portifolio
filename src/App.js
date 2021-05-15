@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { fadeAnimation } from "./animations";
 import Routes from "./routes/routes";
 //loading component
-import Loading from "./components/Loading";
+import { Container } from "./components/PageLoading";
 //import Context
 import { ModalContext } from "./GlobalContext";
 
@@ -21,7 +21,7 @@ function App() {
     <ModalContext.Provider value={{ isModalOpen, setIsModalOpen }}>
       <AnimatePresence exitBeforeEnter>
         {isLoading ? (
-          <Loading />
+          <Container />
         ) : (
           <motion.div
             initial="hidden"
