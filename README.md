@@ -1,4 +1,4 @@
-This is a cool website that I create to show my works as a programmer, feel confortable to give me tips to improve my work.
+This is a cool website that I create to show my works as a programmer, feel comfortable giving me tips to improve my work.
 
 Open the site [here](https://erickwillian.me/#/works)
 
