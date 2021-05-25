@@ -64,11 +64,13 @@ const JobCard = styled.div`
   align-items: space-around;
   margin: 0px 20px;
   width: 33%;
-  height: 60vh;
+  height: 100%;
   & > div {
     padding: 10px 20px;
     backdrop-filter: blur(10px);
-    height: 100%;
+    & > div {
+      max-width: 100%;
+    }
   }
   &:hover ${LineBottom} {
     width: 100%;
@@ -87,7 +89,8 @@ const CardTitle = styled.div`
 const CardWrapper = styled.div`
   display: flex;
   position: relative;
-  width: 80vw;
+  width: 1000px;
+  height: 400px;
   margin: 20px;
 `;
 
@@ -124,13 +127,26 @@ const CardDetails = styled.div`
     }
   }
 `;
-const ClientMessage = styled.p`
-  position: absolute;
-  width: fit-content;
-  bottom: 10px;
-  left: 50%;
-  font-style: italic;
-  transform: translate(-50%, 0);
+const ClientMessage = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & > p {
+    margin: 5px 0;
+    font-style: italic;
+  }
+`;
+
+const SeeMoreButton = styled.div`
+  background: none;
+  color: ${({ color }) => color};
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  font-size: 12px;
+  text-decoration: underline;
 `;
 
 export {
@@ -143,5 +159,6 @@ export {
   ImageContainer,
   CardDetails,
   ClientMessage,
-  LineBottom
+  LineBottom,
+  SeeMoreButton
 };
