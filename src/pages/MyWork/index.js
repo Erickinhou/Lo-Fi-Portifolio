@@ -9,7 +9,7 @@ import Modal from "../../components/Modal";
 //animation
 import { sidePagesAnimation } from "../../animations";
 import { Background, IconContainer, Container } from "./style";
-import WorkData from "./workData";
+import WorkData from "./WorkData";
 
 export default function MyWork() {
   const [showData, setShowData] = useState(false);
