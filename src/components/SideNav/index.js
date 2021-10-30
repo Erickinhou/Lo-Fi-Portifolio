@@ -5,7 +5,7 @@ import {
   Linkedin,
   Instagram,
   Facebook,
-  ArrowLeft
+  ArrowLeft,
 } from "react-feather";
 import Music from "./Music";
 import {
@@ -16,7 +16,7 @@ import {
   SideNav,
   IconBottom,
   SpaceTop,
-  ArrowWrapper
+  ArrowWrapper,
 } from "./style";
 export default function SideNavigation({ hideMusic }) {
   const location = useLocation();
@@ -26,20 +26,16 @@ export default function SideNavigation({ hideMusic }) {
     linkedin: "https://www.linkedin.com/in/erick-willian-8553a2133/",
     facebook: "https://www.facebook.com/erick.willian.16100",
     gitHub: "https://github.com/Erickinhou",
-    instagram: "https://www.instagram.com/erick_willian_/"
+    instagram: "https://www.instagram.com/erick_willian_/",
   };
 
   const IconsAttr = {
-    strokeWidth: "1.2",
-    width: "2.7vw",
-    height: "2.7vw"
+    width: "100%",
+    height: "100%",
   };
 
   const IconsBottomAttr = {
-    strokeWidth: "1.2",
-    width: "2vw",
-    height: "2vw",
-    color: "var(--light)"
+    color: "var(--light)",
   };
 
   return (
