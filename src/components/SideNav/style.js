@@ -81,11 +81,15 @@ const StyleArrow = styled.div`
   padding: 10px;
   color: var(--light);
   cursor: pointer;
+  width: 3rem;
+  position: absolute;
+  top: 0.3rem;
+  left: 5.3rem;
   @media screen and (min-width: 320px) and (max-width: 767px) {
-    width: 0.5rem;
-    position: absolute;
-    top: 0.3rem;
+    color: white;
+    width: 2rem;
     left: 0.3rem;
+    color: white;
   }
 `;
 const ArrowWrapper = motion(StyleArrow);

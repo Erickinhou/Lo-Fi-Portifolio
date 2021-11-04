@@ -16,42 +16,42 @@ export default function MyWork() {
   const workDataVariants = {
     hidden: {
       opacity: 0,
-      y: "-100%"
+      y: "-100%",
     },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
         type: "spring",
-        duration: 0.8
-      }
+        duration: 0.8,
+      },
     },
     exit: {
       opacity: 0,
       y: "-100%",
       transition: {
         type: "spring",
-        duration: 0.3
-      }
-    }
+        duration: 0.3,
+      },
+    },
   };
 
   const clickTextVariance = {
     hidden: {
-      opacity: 0
+      opacity: 0,
     },
     visible: {
       opacity: 1,
       transition: {
-        duration: 1.6
-      }
+        duration: 1.6,
+      },
     },
     exit: {
       opacity: 0,
       transition: {
-        duration: 1.6
-      }
-    }
+        duration: 1.6,
+      },
+    },
   };
   const hexagonVariance = {
     hover: {
@@ -60,16 +60,16 @@ export default function MyWork() {
       transition: {
         type: "spring",
         mass: 2,
-        stiffness: 500
-      }
+        stiffness: 500,
+      },
     },
     closed: {
-      y: 0
+      y: 0,
     },
     opened: {
       scale: 1.3,
-      rotate: 90
-    }
+      rotate: 90,
+    },
   };
 
   const { isModalOpen } = useContext(ModalContext);
@@ -89,7 +89,7 @@ export default function MyWork() {
                 animate="visible"
                 exit="exit"
               >
-                Click Here <ArrowRight />{" "}
+                Click Here <ArrowRight className="arrow-right" />{" "}
               </motion.div>
             )}
           </AnimatePresence>

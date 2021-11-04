@@ -15,7 +15,6 @@ const Background = motion(styled.div`
   @media screen and (min-width: 320px) and (max-width: 767px) {
     background-position: 60%;
     overflow-y: hidden;
-    height: 100%;
   }
 `);
 

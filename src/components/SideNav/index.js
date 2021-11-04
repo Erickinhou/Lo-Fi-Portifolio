@@ -39,7 +39,7 @@ export default function SideNavigation({ hideMusic }) {
   };
 
   return (
-    <SideNav hideMusic={hideMusic}>
+    <>
       {location.pathname !== "/" && (
         <ArrowWrapper
           whileHover={{ scale: 1.2 }}
@@ -48,22 +48,24 @@ export default function SideNavigation({ hideMusic }) {
           <ArrowLeft {...IconsAttr} />
         </ArrowWrapper>
       )}
-      <SpaceTop />
-      <GitHubIcon href={socialMedia.gitHub} target="_blank">
-        <GitHub {...IconsAttr}></GitHub>
-      </GitHubIcon>
-      <LinkedinIcon href={socialMedia.linkedin} target="_blank">
-        <Linkedin {...IconsAttr}></Linkedin>
-      </LinkedinIcon>
-      <InstagramIcon href={socialMedia.instagram} target="_blank">
-        <Instagram {...IconsAttr}></Instagram>
-      </InstagramIcon>
-      <FacebookIcon href={socialMedia.facebook} target="_blank">
-        <Facebook {...IconsAttr}></Facebook>
-      </FacebookIcon>
-      <IconBottom>
-        <Music {...IconsBottomAttr}></Music>
-      </IconBottom>
-    </SideNav>
+      <SideNav hideMusic={hideMusic}>
+        <SpaceTop />
+        <GitHubIcon href={socialMedia.gitHub} target="_blank">
+          <GitHub {...IconsAttr}></GitHub>
+        </GitHubIcon>
+        <LinkedinIcon href={socialMedia.linkedin} target="_blank">
+          <Linkedin {...IconsAttr}></Linkedin>
+        </LinkedinIcon>
+        <InstagramIcon href={socialMedia.instagram} target="_blank">
+          <Instagram {...IconsAttr}></Instagram>
+        </InstagramIcon>
+        <FacebookIcon href={socialMedia.facebook} target="_blank">
+          <Facebook {...IconsAttr}></Facebook>
+        </FacebookIcon>
+        <IconBottom>
+          <Music {...IconsBottomAttr}></Music>
+        </IconBottom>
+      </SideNav>
+    </>
   );
 }

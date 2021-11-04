@@ -15,6 +15,10 @@ const Background = motion(styled.div`
   font-size: 1.5rem;
   font-weight: 300;
   overflow: hidden;
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    background-position: 60%;
+    overflow-y: hidden;
+  }
 `);
 const Container = styled.div`
   margin: 0 0 0 8vw;
@@ -24,6 +28,10 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    width: 100%;
+    margin: 0;
+  }
 `;
 
 const IconContainer = styled.div`
@@ -46,6 +54,15 @@ const IconContainer = styled.div`
     right: 0px;
     svg {
       margin-left: 5px;
+    }
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    font-size: 0.75rem;
+    margin-right: 5px;
+    width: 100px;
+    .icon-text {
+      display: none;
     }
   }
 `;
@@ -160,5 +177,5 @@ export {
   CardDetails,
   ClientMessage,
   LineBottom,
-  SeeMoreButton
+  SeeMoreButton,
 };
