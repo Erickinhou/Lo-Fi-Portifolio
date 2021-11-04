@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 const Icon = styled.a`
   padding: 2vh 2vw;
   color: var(--light);
+  width: 1.5rem;
+  height: 1.5rem;
   transition: all 0.4s ease-in-out;
   @media screen and (min-width: 320px) and (max-width: 767px) {
-    width: 1.5rem;
-    height: 1.5rem;
     padding: 0 5px;
   }
 `;
@@ -81,6 +81,12 @@ const StyleArrow = styled.div`
   padding: 10px;
   color: var(--light);
   cursor: pointer;
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    width: 0.5rem;
+    position: absolute;
+    top: 0.3rem;
+    left: 0.3rem;
+  }
 `;
 const ArrowWrapper = motion(StyleArrow);
 export {
