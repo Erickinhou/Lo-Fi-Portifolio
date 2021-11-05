@@ -56,13 +56,22 @@ const IconContainer = styled.div`
       margin-left: 5px;
     }
   }
+  .tap-text {
+    display: none;
+  }
 
   @media screen and (min-width: 320px) and (max-width: 767px) {
     font-size: 0.75rem;
-    margin-right: 5px;
+    margin-right: 0;
     width: 100px;
     .icon-text {
       display: none;
+    }
+    .tap-text {
+      top: -20px;
+      left: 25%;
+      position: absolute;
+      display: inherit;
     }
   }
 `;

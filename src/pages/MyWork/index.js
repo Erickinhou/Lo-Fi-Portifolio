@@ -83,13 +83,15 @@ export default function MyWork() {
           <AnimatePresence exitBeforeEnter>
             {!showData && (
               <motion.div
-                className="icon-text"
                 variants={clickTextVariance}
                 initial="hidden"
                 animate="visible"
                 exit="exit"
               >
-                Click Here <ArrowRight className="arrow-right" />{" "}
+                <div className="icon-text">
+                  Click Here <ArrowRight className="arrow-right" />
+                </div>
+                <div className="tap-text">Tap here</div>
               </motion.div>
             )}
           </AnimatePresence>
