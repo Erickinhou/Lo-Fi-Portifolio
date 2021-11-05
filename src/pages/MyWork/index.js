@@ -115,7 +115,7 @@ export default function MyWork() {
               animate="visible"
               exit="exit"
             >
-              <WorkData></WorkData>
+              <WorkData />
             </motion.div>
           )}
         </AnimatePresence>

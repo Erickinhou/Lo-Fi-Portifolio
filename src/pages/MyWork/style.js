@@ -104,6 +104,9 @@ const JobCard = styled.div`
   a {
     text-decoration: none;
   }
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    width: 92vw;
+  }
 `;
 
 const CardTitle = styled.div`
@@ -113,11 +116,18 @@ const CardTitle = styled.div`
 `;
 
 const CardWrapper = styled.div`
-  display: flex;
-  position: relative;
-  width: 1000px;
-  height: 400px;
-  margin: 20px;
+  & > div {
+    display: flex;
+    position: relative;
+    width: 1000px;
+    height: 400px;
+    margin: 20px;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    overflow-x: scroll;
+    width: 100vw;
+  }
 `;
 
 const ImageContainer = styled.div`
