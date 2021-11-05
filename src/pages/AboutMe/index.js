@@ -5,7 +5,7 @@ import ContactMe from "../../components/ContactMeButton";
 import Modal from "../../components/Modal";
 import { ModalContext } from "../../GlobalContext";
 import imageErick from "../../assets/images/imageErick.png";
-import awsLogo from "../../assets/images/aws-logo.png";
+import redux from "../../assets/images/redux.svg";
 import reactLogo from "../../assets/images/react.svg";
 import htmlLogo from "../../assets/images/html.svg";
 import nodeLogo from "../../assets/images/node.svg";
@@ -21,7 +21,7 @@ const Index = () => {
     { name: "TypeScript", image: typeScriptLogo },
     { name: "Html", image: htmlLogo },
     { name: "Sass", image: sassLogo },
-    { name: "aws", image: awsLogo }
+    { name: "Redux", image: redux },
   ];
 
   const { isModalOpen } = useContext(ModalContext);
