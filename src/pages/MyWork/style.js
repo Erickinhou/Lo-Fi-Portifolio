@@ -18,6 +18,9 @@ const Background = motion(styled.div`
   @media screen and (min-width: 320px) and (max-width: 767px) {
     background-position: 20%;
     overflow-y: hidden;
+    @supports (-webkit-appearance: none) {
+      height: calc(100vh + 56px);
+    }
   }
 `);
 const Container = styled.div`

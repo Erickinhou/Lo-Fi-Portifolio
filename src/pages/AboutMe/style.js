@@ -37,6 +37,9 @@ export const Container = styled.div`
   @media screen and (min-width: 320px) and (max-width: 767px) {
     margin-top: 7vh;
     height: 50vh;
+    @supports (-webkit-appearance: none) {
+      height: calc(100vh + 56px);
+    }
   }
 `;
 
