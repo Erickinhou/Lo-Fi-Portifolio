@@ -12,7 +12,8 @@ import {
   Form,
   MessageInput,
   SubmitButton,
-  CloseModalOverlay
+  CloseModalOverlay,
+  CloseModal,
 } from "./style";
 
 const Index = () => {
@@ -27,6 +28,7 @@ const Index = () => {
     <Container>
       <CloseModalOverlay onClick={() => setIsModalOpen(false)} />
       <ModalCard>
+        <CloseModal onClick={() => setIsModalOpen(false)}>X</CloseModal>
         <Title>Say Hello!</Title>
         <Form onSubmit={handleSubmit}>
           <div>
@@ -53,7 +55,7 @@ const Index = () => {
           </div>
           <SubmitButton
             whileHover={{
-              scale: 1.1
+              scale: 1.1,
             }}
             whileTap={{ scale: 0.9 }}
             type="submit"

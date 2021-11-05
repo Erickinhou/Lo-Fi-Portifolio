@@ -18,6 +18,11 @@ export const Background = motion(styled.div`
   & > div:first-child {
     background-color: rgba(0, 0, 0, 0.3);
   }
+
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    font-size: 0.85rem;
+    background-position: 15%;
+  }
 `);
 
 export const ContactMe = styled.div``;
@@ -29,6 +34,18 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    margin-top: 7vh;
+    height: 50vh;
+    @supports (-webkit-appearance: none) {
+      height: calc(100vh + 56px);
+    }
+  }
+`;
+
+export const ImagesWrapper = styled.div`
+  width: 100%;
+  display: flex;
 `;
 const MotionImage = styled.div`
   display: flex;
@@ -36,11 +53,19 @@ const MotionImage = styled.div`
   margin: 0px 10px;
   img {
     height: ${({ size = "auto" }) => size};
-    border-radius: 50px;
+    border-radius: ${({ rounded }) => (rounded ? "50px" : "0")};
   }
   p {
     text-align: center;
     font-weight: bold;
+  }
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    img {
+      height: ${({ size }) => (size ? "35px" : size)};
+    }
+    p {
+      display: none;
+    }
   }
 `;
 
@@ -70,7 +95,7 @@ export const TextBox = styled.div`
     }
   }};
   width: ${({ size = "auto" }) => size};
-  margin: 20px 20px 20px 0px;
+  margin: 20px;
   font-weight: 400;
   display: flex;
   flex-direction: ${({ align }) => align};
@@ -91,11 +116,21 @@ export const TextBox = styled.div`
       margin-right: 10px;
     }
   }
+
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    font-size: 0.75rem;
+    .hide-mobile {
+      display: none;
+    }
+  }
 `;
 
 export const Title = styled.p`
   font-weight: bold;
   font-size: 20px;
   margin-bottom: 5px;
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    font-size: 1rem;
+  }
 `;
 export const ImageWrapper = motion(MotionImage);

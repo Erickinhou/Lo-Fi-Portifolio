@@ -1,11 +1,18 @@
 import React, { useContext } from "react";
 import { ChevronsLeft } from "react-feather";
-import { Background, Container, ImageWrapper, TextBox, Title } from "./style";
+import {
+  Background,
+  Container,
+  ImageWrapper,
+  TextBox,
+  Title,
+  ImagesWrapper,
+} from "./style";
 import ContactMe from "../../components/ContactMeButton";
 import Modal from "../../components/Modal";
 import { ModalContext } from "../../GlobalContext";
 import imageErick from "../../assets/images/imageErick.png";
-import awsLogo from "../../assets/images/aws-logo.png";
+import redux from "../../assets/images/redux.svg";
 import reactLogo from "../../assets/images/react.svg";
 import htmlLogo from "../../assets/images/html.svg";
 import nodeLogo from "../../assets/images/node.svg";
@@ -16,12 +23,12 @@ import { sidePagesAnimation } from "../../animations";
 
 const Index = () => {
   const techs = [
-    { name: "React.js", image: reactLogo },
-    { name: "Node.js", image: nodeLogo },
-    { name: "TypeScript", image: typeScriptLogo },
-    { name: "Html", image: htmlLogo },
-    { name: "Sass", image: sassLogo },
-    { name: "aws", image: awsLogo }
+    { name: "React.js", image: reactLogo, rounded: false },
+    { name: "Node.js", image: nodeLogo, rounded: false },
+    { name: "TypeScript", image: typeScriptLogo, rounded: true },
+    { name: "Html", image: htmlLogo, rounded: false },
+    { name: "Sass", image: sassLogo, rounded: false },
+    { name: "Redux", image: redux, rounded: false },
   ];
 
   const { isModalOpen } = useContext(ModalContext);
@@ -42,7 +49,7 @@ const Index = () => {
                 with <span>+2 years</span> of professional experience
               </p>
             </div>
-            <ImageWrapper draggable={true} drag>
+            <ImageWrapper draggable={true} drag rounded>
               <img src={imageErick} alt="Erick '-'" />
             </ImageWrapper>
           </TextBox>
@@ -76,7 +83,7 @@ const Index = () => {
               </div>
             </div>
 
-            <div>
+            <div className="hide-mobile">
               <Title>
                 Things that I{" "}
                 <span role="img" aria-label="Love">
@@ -105,19 +112,20 @@ const Index = () => {
           </TextBox>
           <TextBox align="column" side="center">
             <Title>Technologies that I domain</Title>
-            <TextBox>
-              {techs.map(({ name, image }) => (
+            <ImagesWrapper>
+              {techs.map(({ name, image, rounded }) => (
                 <ImageWrapper
                   size="50px;"
                   whileHover={{ scale: 1.1 }}
                   draggable={true}
+                  rounded={rounded}
                   drag
                 >
                   <img src={image} alt={name} />
                   <p>{name}</p>
                 </ImageWrapper>
               ))}
-            </TextBox>
+            </ImagesWrapper>
           </TextBox>
         </Container>
       </div>

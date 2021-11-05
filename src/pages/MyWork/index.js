@@ -16,42 +16,42 @@ export default function MyWork() {
   const workDataVariants = {
     hidden: {
       opacity: 0,
-      y: "-100%"
+      y: "-100%",
     },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
         type: "spring",
-        duration: 0.8
-      }
+        duration: 0.8,
+      },
     },
     exit: {
       opacity: 0,
       y: "-100%",
       transition: {
         type: "spring",
-        duration: 0.3
-      }
-    }
+        duration: 0.3,
+      },
+    },
   };
 
   const clickTextVariance = {
     hidden: {
-      opacity: 0
+      opacity: 0,
     },
     visible: {
       opacity: 1,
       transition: {
-        duration: 1.6
-      }
+        duration: 1.6,
+      },
     },
     exit: {
       opacity: 0,
       transition: {
-        duration: 1.6
-      }
-    }
+        duration: 1.6,
+      },
+    },
   };
   const hexagonVariance = {
     hover: {
@@ -60,16 +60,16 @@ export default function MyWork() {
       transition: {
         type: "spring",
         mass: 2,
-        stiffness: 500
-      }
+        stiffness: 500,
+      },
     },
     closed: {
-      y: 0
+      y: 0,
     },
     opened: {
       scale: 1.3,
-      rotate: 90
-    }
+      rotate: 90,
+    },
   };
 
   const { isModalOpen } = useContext(ModalContext);
@@ -83,13 +83,15 @@ export default function MyWork() {
           <AnimatePresence exitBeforeEnter>
             {!showData && (
               <motion.div
-                className="icon-text"
                 variants={clickTextVariance}
                 initial="hidden"
                 animate="visible"
                 exit="exit"
               >
-                Click Here <ArrowRight />{" "}
+                <div className="icon-text">
+                  Click Here <ArrowRight className="arrow-right" />
+                </div>
+                <div className="tap-text">Tap here</div>
               </motion.div>
             )}
           </AnimatePresence>
@@ -113,7 +115,7 @@ export default function MyWork() {
               animate="visible"
               exit="exit"
             >
-              <WorkData></WorkData>
+              <WorkData />
             </motion.div>
           )}
         </AnimatePresence>

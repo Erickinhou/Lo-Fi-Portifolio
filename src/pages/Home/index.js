@@ -13,7 +13,8 @@ import {
   MusicTextArea,
   Agency,
   MinorText,
-  AgencyLink
+  AgencyLink,
+  ButtonWrapper,
 } from "./style";
 
 const buttonVariants = {
@@ -23,13 +24,13 @@ const buttonVariants = {
     boxShadow: "0 0 50px #eb5757",
     transition: {
       delay: 0.4,
-      duration: 0.1
-    }
+      duration: 0.1,
+    },
   },
   strokeHover: {
     boxShadow: "0px 0px 8px rgb(255,255,255)",
-    textShadow: "0px 0px 8px rgb(255,255,255)"
-  }
+    textShadow: "0px 0px 8px rgb(255,255,255)",
+  },
 };
 
 export default function Home() {
@@ -44,7 +45,7 @@ export default function Home() {
           and a Brazilian who loves to create new things
           <br /> and a listener of lofi :p
         </Text>
-        <div>
+        <ButtonWrapper>
           <Button variants={buttonVariants} whileHover="hover" to="/works">
             <span>See my works</span>
           </Button>
@@ -56,7 +57,7 @@ export default function Home() {
           >
             <span>About Me</span>
           </StrokeButton>
-        </div>
+        </ButtonWrapper>
       </MainArea>
       <MusicTextArea>
         <ArrowLeft></ArrowLeft>

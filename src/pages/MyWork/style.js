@@ -15,6 +15,13 @@ const Background = motion(styled.div`
   font-size: 1.5rem;
   font-weight: 300;
   overflow: hidden;
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    background-position: 20%;
+    overflow-y: hidden;
+    @supports (-webkit-appearance: none) {
+      height: calc(100vh + 56px);
+    }
+  }
 `);
 const Container = styled.div`
   margin: 0 0 0 8vw;
@@ -24,6 +31,10 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    width: 100%;
+    margin: 0;
+  }
 `;
 
 const IconContainer = styled.div`
@@ -46,6 +57,24 @@ const IconContainer = styled.div`
     right: 0px;
     svg {
       margin-left: 5px;
+    }
+  }
+  .tap-text {
+    display: none;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    font-size: 0.75rem;
+    margin-right: 0;
+    width: 100px;
+    .icon-text {
+      display: none;
+    }
+    .tap-text {
+      top: -20px;
+      left: 25%;
+      position: absolute;
+      display: inherit;
     }
   }
 `;
@@ -78,6 +107,9 @@ const JobCard = styled.div`
   a {
     text-decoration: none;
   }
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    width: 92vw;
+  }
 `;
 
 const CardTitle = styled.div`
@@ -87,11 +119,18 @@ const CardTitle = styled.div`
 `;
 
 const CardWrapper = styled.div`
-  display: flex;
-  position: relative;
-  width: 1000px;
-  height: 400px;
-  margin: 20px;
+  & > div {
+    display: flex;
+    position: relative;
+    width: 1000px;
+    height: 400px;
+    margin: 20px;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    overflow-x: scroll;
+    width: 100vw;
+  }
 `;
 
 const ImageContainer = styled.div`
@@ -160,5 +199,5 @@ export {
   CardDetails,
   ClientMessage,
   LineBottom,
-  SeeMoreButton
+  SeeMoreButton,
 };

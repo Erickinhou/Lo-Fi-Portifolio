@@ -12,28 +12,53 @@ const Background = motion(styled.div`
   background: url(${Its1amGif});
   background-size: cover;
   font-family: "Montserrat", sans-serif;
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    background-position: 60%;
+    overflow-y: hidden;
+    height: auto;
+    min-height: -webkit-fill-available;
+    @supports (-webkit-appearance: none) {
+      height: calc(100vh + 56px);
+    }
+  }
 `);
 
 const MainArea = styled.div`
   color: #ddd;
   margin: 0 0 0 8vw;
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    margin: 12px 8vw 0 8vw;
+    width: 100%;
+  }
 `;
 
 const Text = styled.h3`
   font-weight: 400;
   font-size: 16px;
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    font-size: 0.9rem;
+  }
 `;
 const TextMain = styled.h1`
   font-weight: 400;
   font-size: 32px;
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    font-size: 1.4rem;
+  }
 `;
 const TextHighlight = styled.b`
   color: var(--red);
   font-weight: 500;
 `;
 
-//
-//Buttons Area
+const ButtonWrapper = styled.div`
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+`;
+
 const ButtonsProps = motion.custom(Link);
 const Button = styled(ButtonsProps)`
   position: relative;
@@ -78,6 +103,13 @@ const Button = styled(ButtonsProps)`
     border-right: 2px solid var(--red);
     transition: 0.5s;
   }
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    width: 130px;
+    padding: 6px 0;
+    & > span {
+      font-size: 0.8rem;
+    }
+  }
 `;
 
 const StrokeButton = styled(ButtonsProps)`
@@ -93,6 +125,13 @@ const StrokeButton = styled(ButtonsProps)`
   margin: 0 0 0 2vw;
   overflow: hidden;
   box-sizing: border-box;
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    width: 100px;
+    padding: 4px 0;
+    & > span {
+      font-size: 0.8rem;
+    }
+  }
 `;
 
 //Agency area
@@ -105,6 +144,9 @@ const Agency = styled.p`
   color: var(--light);
   font-size: 1.2rem;
   font-weight: 300;
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    display: none;
+  }
 `;
 const AgencyLink = styled.a`
   color: var(--blue);
@@ -119,6 +161,9 @@ const MusicTextArea = styled.div`
   align-items: center;
   font-size: 1.2rem;
   color: var(--light);
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    display: none;
+  }
 `;
 
 const MinorText = styled.p`
@@ -136,5 +181,6 @@ export {
   Agency,
   MusicTextArea,
   MinorText,
-  AgencyLink
+  AgencyLink,
+  ButtonWrapper,
 };

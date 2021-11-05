@@ -9,7 +9,7 @@ import {
   CardDetails,
   ClientMessage,
   LineBottom,
-  SeeMoreButton
+  SeeMoreButton,
 } from "./style.js";
 import storyKeeperLogo from "../../assets/images/storyKeeper.png";
 import h2rLogo from "../../assets/images/H2R.png";
@@ -17,8 +17,8 @@ import ethicsNetLogo from "../../assets/images/logoEthics.png";
 
 const cardVariant = {
   Hover: {
-    scale: 1.1
-  }
+    scale: 1.1,
+  },
 };
 
 const projects = [
@@ -31,7 +31,7 @@ const projects = [
     color: "#44A4E2",
     message: "Just a pleasure to work with!",
     urlProject: "https://storekeeper.nl/",
-    messageExtended: false
+    messageExtended: false,
   },
   {
     title: "H2R",
@@ -43,7 +43,7 @@ const projects = [
     message:
       "Erick has evolved every day as a professional. His code improved both in legibility and in performance, so we started to pass new challenges, and as usual, he managed to stay above expectations.",
     urlProject: "https://painel.h2recommerce.com.br/login",
-    messageExtended: true
+    messageExtended: true,
   },
   {
     title: "Ethics Net",
@@ -54,8 +54,8 @@ const projects = [
     color: "#143B53",
     message: "-",
     urlProject: "https://www.ethicsnet.org/",
-    messageExtended: false
-  }
+    messageExtended: false,
+  },
 ];
 
 const arraySetSeeMore = projects.map(({ messageExtended }) => messageExtended);
@@ -67,78 +67,80 @@ export default function WorkData() {
     console.log("seeMores -> ", seeMores);
     return (
       <CardWrapper>
-        {projects.map(
-          (
-            { title, worked, image, time, techs, color, message, urlProject },
-            index
-          ) => {
-            return (
-              <JobCard key={index}>
-                <motion.div variants={cardVariant} whileHover="Hover">
-                  <div>
-                    <a
-                      href={urlProject}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <CardTitle color={color}>
-                        {title}
-                        <LineBottom color={color} />
-                      </CardTitle>
-                      <ImageContainer>
-                        <img src={image} alt={title} />
-                      </ImageContainer>
-                    </a>
-                    <CardDetails>
-                      <div>
-                        <Coffee />
-                        <p>{worked}</p>
-                        {/* <p>{time}</p> */}
-                      </div>
-
-                      <div>
-                        {techs.map((tech, index) => (
-                          <p key={index}>{tech}</p>
-                        ))}
-                      </div>
-                    </CardDetails>
-                    <ClientMessage>
-                      <p
-                        style={
-                          seeMores[index]
-                            ? {
-                                textOverflow: "ellipsis",
-                                whiteSpace: "nowrap",
-                                overflow: "hidden"
-                              }
-                            : {}
-                        }
+        <div>
+          {projects.map(
+            (
+              { title, worked, image, time, techs, color, message, urlProject },
+              index
+            ) => {
+              return (
+                <JobCard key={index}>
+                  <motion.div variants={cardVariant} whileHover="Hover">
+                    <div>
+                      <a
+                        href={urlProject}
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
-                        "{message}"
-                      </p>
-                      {seeMores[index] ? (
-                        <SeeMoreButton
-                          color={color}
-                          onClick={() =>
-                            setSeeMores(
-                              seeMores.map((seeMore, indexSeeMore) =>
-                                indexSeeMore === index ? !seeMore : seeMore
-                              )
-                            )
+                        <CardTitle color={color}>
+                          {title}
+                          <LineBottom color={color} />
+                        </CardTitle>
+                        <ImageContainer>
+                          <img src={image} alt={title} />
+                        </ImageContainer>
+                      </a>
+                      <CardDetails>
+                        <div>
+                          <Coffee />
+                          <p>{worked}</p>
+                          {/* <p>{time}</p> */}
+                        </div>
+
+                        <div>
+                          {techs.map((tech, index) => (
+                            <p key={index}>{tech}</p>
+                          ))}
+                        </div>
+                      </CardDetails>
+                      <ClientMessage>
+                        <p
+                          style={
+                            seeMores[index]
+                              ? {
+                                  textOverflow: "ellipsis",
+                                  whiteSpace: "nowrap",
+                                  overflow: "hidden",
+                                }
+                              : {}
                           }
                         >
-                          See more
-                        </SeeMoreButton>
-                      ) : (
-                        <></>
-                      )}
-                    </ClientMessage>
-                  </div>
-                </motion.div>
-              </JobCard>
-            );
-          }
-        )}
+                          "{message}"
+                        </p>
+                        {seeMores[index] ? (
+                          <SeeMoreButton
+                            color={color}
+                            onClick={() =>
+                              setSeeMores(
+                                seeMores.map((seeMore, indexSeeMore) =>
+                                  indexSeeMore === index ? !seeMore : seeMore
+                                )
+                              )
+                            }
+                          >
+                            See more
+                          </SeeMoreButton>
+                        ) : (
+                          <></>
+                        )}
+                      </ClientMessage>
+                    </div>
+                  </motion.div>
+                </JobCard>
+              );
+            }
+          )}
+        </div>
       </CardWrapper>
     );
   }

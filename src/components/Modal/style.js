@@ -16,6 +16,24 @@ export const Container = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
 `;
+
+export const CloseModal = styled.button`
+  display: none;
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    display: inherit;
+    color: white;
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+  }
+`;
 export const ModalCard = styled.div`
   border-radius: 20px;
   background: url(${lofiPlace});
@@ -24,6 +42,7 @@ export const ModalCard = styled.div`
   padding: 40px;
   font-weight: 400;
   z-index: 20;
+  position: relative;
   //pointer-events: none;
 `;
 export const Title = styled.p`
