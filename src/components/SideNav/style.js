@@ -64,6 +64,7 @@ const SideNav = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    backdrop-filter: none;
   }
 `;
 const IconBottom = styled.div`
