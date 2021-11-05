@@ -52,9 +52,10 @@ const SideNav = styled.div`
   border-right: 2px solid var(--light);
   backdrop-filter: blur(2px);
   @media screen and (min-width: 320px) and (max-width: 767px) {
-    width: 96vw;
+    min-width: 96vw;
+    overflow: hidden;
     border-right: 0;
-    margin: 0 2vw;
+    padding: 0 2vw;
     height: 3rem;
     position: absolute;
     top: auto;
