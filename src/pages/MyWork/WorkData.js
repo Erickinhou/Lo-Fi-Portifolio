@@ -42,7 +42,7 @@ const projects = [
     color: "#68C39E",
     message:
       "Erick has evolved every day as a professional. His code improved both in legibility and in performance, so we started to pass new challenges, and as usual, he managed to stay above expectations.",
-    urlProject: "https://painel.h2recommerce.com.br/login",
+    urlProject: "https://www.linkedin.com/company/hr2tech/about",
     messageExtended: true,
   },
   {
