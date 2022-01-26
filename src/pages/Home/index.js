@@ -59,10 +59,10 @@ export default function Home() {
           </StrokeButton>
         </ButtonWrapper>
       </MainArea>
-      <MusicTextArea>
+      {/* <MusicTextArea>
         <ArrowLeft></ArrowLeft>
         <MinorText> Hit the play button and chill </MinorText>
-      </MusicTextArea>
+      </MusicTextArea> */}
       <Agency>
         Meet my agency in{" "}
         <AgencyLink target="_blank" href="http://lecode.dev">

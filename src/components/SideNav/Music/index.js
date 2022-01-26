@@ -14,6 +14,7 @@ export default function Music(props) {
 
   const [muted, setMuted] = useState(false);
   const [isPlaying, setIsPlaying] = useState(true);
+  const [volume, setVolume] = useState(0.5);
   const [currentSong, setCurrentSong] = useState(1);
 
   const controls = useAnimation();
@@ -22,6 +23,7 @@ export default function Music(props) {
   useEffect(() => {
     const IntegerRandomNumber = Math.floor(Math.random() * 4);
     music.current.src = musics[IntegerRandomNumber];
+    music.current.volume = volume;
     setCurrentSong(IntegerRandomNumber);
   }, []);
 
@@ -36,7 +38,7 @@ export default function Music(props) {
     <audio
       {...(muted ? { muted: true } : {})}
       onCanPlay={(e) => setIsPlaying(e.target.paused)}
-      autoPlay={false}
+      autoPlay={true}
       ref={music}
       onEnded={handleSongEnd}
       src=""
@@ -48,17 +50,24 @@ export default function Music(props) {
     setIsPlaying(!isPlaying);
   };
 
+  const handleVolume = (e) => {
+    const newVolume = e.target.value / 100;
+    setVolume(newVolume);
+    setMuted(false);
+    music.current.volume = newVolume;
+  };
+
+  const trackAnimation = {
+    transform: `translateX(${volume * 100}%)`,
+  };
+
   return (
     <MusicArea
       className="music"
-      onMouseOver={(event) => {
-        //this is the original element the event handler was assigned to
-        const data = event.currentTarget;
+      onMouseOver={() => {
         controls.start("show");
-        // console.log("data ->", data);
       }}
       onMouseLeave={(event) => {
-        console.log("event ->", event);
         controls.start("hidden");
       }}
     >
@@ -75,8 +84,15 @@ export default function Music(props) {
         initial="hidden"
       >
         <div className="track">
-          <input min={0} type="range" name="volume" id="volume" />
-          <div className="blank-track"></div>
+          <input
+            min={0}
+            onChange={handleVolume}
+            type="range"
+            name="volume"
+            id="volume"
+            value={0}
+          />
+          <div style={trackAnimation} className="blank-track"></div>
         </div>
       </VolumeWrapper>
     </MusicArea>

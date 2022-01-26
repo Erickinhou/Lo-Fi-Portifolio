@@ -6,6 +6,7 @@ const MusicArea = styled.div`
   width: 100%;
   position: relative;
   justify-content: space-evenly;
+  align-items: center;
   padding-top: 10px;
   & > div {
     cursor: pointer;
@@ -25,32 +26,49 @@ const VolumeWrapper = styled(motion.div)`
   padding: 3px 10px;
   position: absolute;
   input[type="range"] {
+    height: 0.7rem;
     -webkit-appearance: none;
-  }
-  input[type="range"]::-webkit-slider-runnable-track {
-    width: 300px;
-    height: 5px;
-    background: #ddd;
-    border: none;
-    border-radius: 3px;
-  }
-
-  input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    border: none;
-    height: 16px;
-    width: 16px;
-    border-radius: 50%;
-    background: goldenrod;
-    margin-top: -4px;
+    background: transparent;
+    cursor: pointer;
   }
 
   input[type="range"]:focus {
     outline: none;
   }
 
-  input[type="range"]:focus::-webkit-slider-runnable-track {
-    background: #ccc;
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+  }
+  input[type="range"]::-moz-range-thumb {
+    -webkit-appearance: none;
+    background: transparent;
+    border: none;
+  }
+
+  .track {
+    width: 100%;
+    height: 0.5rem;
+    position: relative;
+    background-color: var(--light);
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      height: 0.7rem;
+    }
+  }
+
+  .blank-track {
+    background: rgb(204, 204, 204);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(0%);
+    pointer-events: none;
   }
 `;
 

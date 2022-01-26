@@ -46,6 +46,6 @@ export const volumeAnimation = {
   },
   show: {
     opacity: 1,
-    x: 110,
+    x: 115,
   },
 };
