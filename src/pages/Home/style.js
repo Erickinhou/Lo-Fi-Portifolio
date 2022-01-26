@@ -152,24 +152,6 @@ const AgencyLink = styled.a`
   color: var(--blue);
 `;
 
-//Music text area
-const MusicTextArea = styled.div`
-  position: absolute;
-  left: 8vw;
-  bottom: 1vw;
-  display: flex;
-  align-items: center;
-  font-size: 1.2rem;
-  color: var(--light);
-  @media screen and (min-width: 320px) and (max-width: 767px) {
-    display: none;
-  }
-`;
-
-const MinorText = styled.p`
-  margin: 0 0 0 0;
-`;
-
 export {
   Background,
   Text,
@@ -179,8 +161,6 @@ export {
   Button,
   StrokeButton,
   Agency,
-  MusicTextArea,
-  MinorText,
   AgencyLink,
   ButtonWrapper,
 };

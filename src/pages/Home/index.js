@@ -1,5 +1,4 @@
 import React from "react";
-import { ArrowLeft } from "react-feather";
 //animation
 import { homePageAnimation } from "../../animations";
 import {
@@ -10,9 +9,7 @@ import {
   TextHighlight,
   Button,
   StrokeButton,
-  MusicTextArea,
   Agency,
-  MinorText,
   AgencyLink,
   ButtonWrapper,
 } from "./style";
