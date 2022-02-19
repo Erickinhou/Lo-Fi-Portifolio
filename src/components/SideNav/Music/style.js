@@ -14,11 +14,13 @@ const MusicArea = styled.div`
   @media screen and (min-width: 320px) and (max-width: 767px) {
     width: 2.5rem;
     justify-content: space-between;
+    align-items: center;
     margin: 0 0 0 auto;
     & svg {
       width: 1rem;
       height: 1rem;
     }
+    flex-direction: row-reverse;
   }
 `;
 
@@ -69,6 +71,13 @@ const VolumeWrapper = styled(motion.div)`
     left: 0;
     transform: translateX(0%);
     pointer-events: none;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    opacity: 1 !important;
+    transform: translateX(0%) !important;
+    position: relative;
+    margin-bottom: 4px;
   }
 `;
 
