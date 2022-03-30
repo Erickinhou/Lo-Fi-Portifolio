@@ -46,7 +46,7 @@ const Index = () => {
               </p>
               <p>
                 {" "}
-                with <span>+2 years</span> of professional experience
+                with <span>+3 years</span> of professional experience
               </p>
             </div>
             <ImageWrapper draggable={true} drag rounded>
