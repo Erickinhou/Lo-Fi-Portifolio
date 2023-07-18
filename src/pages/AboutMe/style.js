@@ -47,6 +47,7 @@ export const ImagesWrapper = styled.div`
 const MotionImage = styled.div`
   display: flex;
   flex-direction: column;
+  cursor: pointer;
   margin: 0px 10px;
   img {
     height: ${({ size = "auto" }) => size};

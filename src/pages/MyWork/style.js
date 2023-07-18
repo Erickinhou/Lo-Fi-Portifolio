@@ -92,11 +92,12 @@ const JobCard = styled.div`
   justify-content: center;
   align-items: space-around;
   margin: 0px 20px;
-  width: 33%;
+  width: 300px;
   height: 100%;
   & > div {
     padding: 10px 20px;
     backdrop-filter: blur(10px);
+    width: 300px;
     & > div {
       max-width: 100%;
     }
@@ -119,17 +120,16 @@ const CardTitle = styled.div`
 `;
 
 const CardWrapper = styled.div`
-  & > div {
-    display: flex;
-    position: relative;
-    width: 1000px;
-    height: 400px;
-    margin: 20px;
-  }
+  display: flex;
+  position: relative;
+  height: 400px;
+  margin: 20px;
+  gap: 28px;
 
   @media screen and (min-width: 320px) and (max-width: 767px) {
     overflow-x: scroll;
     width: 100vw;
+    gap: 12px;
   }
 `;
 

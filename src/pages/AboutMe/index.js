@@ -14,9 +14,9 @@ import { ModalContext } from "../../GlobalContext";
 import imageErick from "../../assets/images/imageErick.png";
 import redux from "../../assets/images/redux.svg";
 import reactLogo from "../../assets/images/react.svg";
-import htmlLogo from "../../assets/images/html.svg";
 import nodeLogo from "../../assets/images/node.svg";
-import sassLogo from "../../assets/images/sass.svg";
+import dockerLogo from "../../assets/images/Moby-logo.png";
+import awsLogo from "../../assets/images/aws-logo.png";
 import typeScriptLogo from "../../assets/images/typeScript.svg";
 //animation
 import { sidePagesAnimation } from "../../animations";
@@ -26,8 +26,8 @@ const Index = () => {
     { name: "React.js", image: reactLogo, rounded: false },
     { name: "Node.js", image: nodeLogo, rounded: false },
     { name: "TypeScript", image: typeScriptLogo, rounded: true },
-    { name: "Html", image: htmlLogo, rounded: false },
-    { name: "Sass", image: sassLogo, rounded: false },
+    { name: "Aws", image: awsLogo, rounded: false },
+    { name: "Docker", image: dockerLogo, rounded: false },
     { name: "Redux", image: redux, rounded: false },
   ];
 
@@ -46,7 +46,7 @@ const Index = () => {
               </p>
               <p>
                 {" "}
-                with <span>+3 years</span> of professional experience
+                with <span>+6 years</span> of professional experience
               </p>
             </div>
             <ImageWrapper draggable={true} drag rounded>
@@ -111,7 +111,13 @@ const Index = () => {
             </div>
           </TextBox>
           <TextBox align="column" side="center">
-            <Title>Technologies that I domain</Title>
+            <Title>
+              Technologies that I domain (click and drag it{" "}
+              <span role="img" aria-labelledby="smile">
+                😊
+              </span>
+              )
+            </Title>
             <ImagesWrapper>
               {techs.map(({ name, image, rounded }) => (
                 <ImageWrapper
