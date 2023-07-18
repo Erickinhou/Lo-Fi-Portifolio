@@ -1,23 +1,24 @@
 {
   "files": {
     "main.css": "/Lo-Fi-Portifolio/static/css/main.d2c7b0b8.chunk.css",
-    "main.js": "/Lo-Fi-Portifolio/static/js/main.f2e4b65b.chunk.js",
-    "main.js.map": "/Lo-Fi-Portifolio/static/js/main.f2e4b65b.chunk.js.map",
+    "main.js": "/Lo-Fi-Portifolio/static/js/main.cc80b39f.chunk.js",
+    "main.js.map": "/Lo-Fi-Portifolio/static/js/main.cc80b39f.chunk.js.map",
     "runtime-main.js": "/Lo-Fi-Portifolio/static/js/runtime-main.8c80e48f.js",
     "runtime-main.js.map": "/Lo-Fi-Portifolio/static/js/runtime-main.8c80e48f.js.map",
     "static/js/2.bd07a833.chunk.js": "/Lo-Fi-Portifolio/static/js/2.bd07a833.chunk.js",
     "static/js/2.bd07a833.chunk.js.map": "/Lo-Fi-Portifolio/static/js/2.bd07a833.chunk.js.map",
     "index.html": "/Lo-Fi-Portifolio/index.html",
-    "precache-manifest.42a0f270b8e10453b5f6814f4ddc9de9.js": "/Lo-Fi-Portifolio/precache-manifest.42a0f270b8e10453b5f6814f4ddc9de9.js",
+    "precache-manifest.e289bdcbfb34a1933f576ca06326b154.js": "/Lo-Fi-Portifolio/precache-manifest.e289bdcbfb34a1933f576ca06326b154.js",
     "service-worker.js": "/Lo-Fi-Portifolio/service-worker.js",
     "static/css/main.d2c7b0b8.chunk.css.map": "/Lo-Fi-Portifolio/static/css/main.d2c7b0b8.chunk.css.map",
     "static/js/2.bd07a833.chunk.js.LICENSE.txt": "/Lo-Fi-Portifolio/static/js/2.bd07a833.chunk.js.LICENSE.txt",
     "static/media/H2R.png": "/Lo-Fi-Portifolio/static/media/H2R.91ea7859.png",
     "static/media/Its1am.gif": "/Lo-Fi-Portifolio/static/media/Its1am.d224866b.gif",
+    "static/media/Moby-logo.png": "/Lo-Fi-Portifolio/static/media/Moby-logo.a137c721.png",
+    "static/media/aws-logo.png": "/Lo-Fi-Portifolio/static/media/aws-logo.6ff6a5ec.png",
     "static/media/bokuNoHeroLofi.mp3": "/Lo-Fi-Portifolio/static/media/bokuNoHeroLofi.19238686.mp3",
     "static/media/dororoLofi.mp3": "/Lo-Fi-Portifolio/static/media/dororoLofi.66222e69.mp3",
     "static/media/flowersLofi.mp3": "/Lo-Fi-Portifolio/static/media/flowersLofi.1eaa45bd.mp3",
-    "static/media/html.svg": "/Lo-Fi-Portifolio/static/media/html.afe31b24.svg",
     "static/media/imageErick.png": "/Lo-Fi-Portifolio/static/media/imageErick.ed9cc1f8.png",
     "static/media/lofiPlace.gif": "/Lo-Fi-Portifolio/static/media/lofiPlace.10aa4845.gif",
     "static/media/logoEthics.png": "/Lo-Fi-Portifolio/static/media/logoEthics.7d179a93.png",
@@ -26,7 +27,6 @@
     "static/media/react.svg": "/Lo-Fi-Portifolio/static/media/react.a31bf6d6.svg",
     "static/media/redux.svg": "/Lo-Fi-Portifolio/static/media/redux.aa0a3376.svg",
     "static/media/relaxAndStudyDark.gif": "/Lo-Fi-Portifolio/static/media/relaxAndStudyDark.7b440dd6.gif",
-    "static/media/sass.svg": "/Lo-Fi-Portifolio/static/media/sass.7ebc03bb.svg",
     "static/media/storyKeeper.png": "/Lo-Fi-Portifolio/static/media/storyKeeper.d0beff30.png",
     "static/media/street.gif": "/Lo-Fi-Portifolio/static/media/street.77240149.gif",
     "static/media/typeScript.svg": "/Lo-Fi-Portifolio/static/media/typeScript.3de182d2.svg"
@@ -35,6 +35,6 @@
     "static/js/runtime-main.8c80e48f.js",
     "static/js/2.bd07a833.chunk.js",
     "static/css/main.d2c7b0b8.chunk.css",
-    "static/js/main.f2e4b65b.chunk.js"
+    "static/js/main.cc80b39f.chunk.js"
   ]
 }

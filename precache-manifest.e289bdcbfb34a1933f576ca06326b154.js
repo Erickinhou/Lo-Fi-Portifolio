@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f65701825807ec63fd9dc43e793be690",
+    "revision": "2d148d18eafdbc2661725b6ccc86ea28",
     "url": "/Lo-Fi-Portifolio/index.html"
   },
   {
-    "revision": "79d6f361ad2600dd5757",
+    "revision": "a1238b1bc6179443542c",
     "url": "/Lo-Fi-Portifolio/static/css/main.d2c7b0b8.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Lo-Fi-Portifolio/static/js/2.bd07a833.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "79d6f361ad2600dd5757",
-    "url": "/Lo-Fi-Portifolio/static/js/main.f2e4b65b.chunk.js"
+    "revision": "a1238b1bc6179443542c",
+    "url": "/Lo-Fi-Portifolio/static/js/main.cc80b39f.chunk.js"
   },
   {
     "revision": "ab4cb0930328379d48a4",
@@ -32,6 +32,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Lo-Fi-Portifolio/static/media/Its1am.d224866b.gif"
   },
   {
+    "revision": "a137c721a8ee30f700f0f99b935d3891",
+    "url": "/Lo-Fi-Portifolio/static/media/Moby-logo.a137c721.png"
+  },
+  {
+    "revision": "6ff6a5ec2e69dbab5b646e2ccbe096ab",
+    "url": "/Lo-Fi-Portifolio/static/media/aws-logo.6ff6a5ec.png"
+  },
+  {
     "revision": "192386861553a83c423671cbfc744300",
     "url": "/Lo-Fi-Portifolio/static/media/bokuNoHeroLofi.19238686.mp3"
   },
@@ -42,10 +50,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "1eaa45bd0c33daa70b23337301433055",
     "url": "/Lo-Fi-Portifolio/static/media/flowersLofi.1eaa45bd.mp3"
-  },
-  {
-    "revision": "afe31b246b88e44e99c928634548388f",
-    "url": "/Lo-Fi-Portifolio/static/media/html.afe31b24.svg"
   },
   {
     "revision": "ed9cc1f8e4fc59542f33701dc129e15c",
@@ -78,10 +82,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "7b440dd6ce0670aa387d2aa0bd6b6e29",
     "url": "/Lo-Fi-Portifolio/static/media/relaxAndStudyDark.7b440dd6.gif"
-  },
-  {
-    "revision": "7ebc03bb53cb2fdb230282fda66dfc7b",
-    "url": "/Lo-Fi-Portifolio/static/media/sass.7ebc03bb.svg"
   },
   {
     "revision": "d0beff30d463aa46e179bfe75353d888",
